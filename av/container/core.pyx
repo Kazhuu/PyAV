@@ -167,6 +167,9 @@ cdef class Container(object):
         self.ptr.flags |= lib.AVFMT_FLAG_GENPTS
         self.ptr.max_analyze_duration = 10000000
 
+        # Force audio codec to be PCM signed 32-bit little-endian.
+        self.ptr.audio_codec_id = lib.AV_CODEC_ID_PCM_S32LE
+
         # Setup Python IO.
         if self.file is not None:
 

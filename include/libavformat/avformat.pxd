@@ -187,6 +187,8 @@ cdef extern from "libavformat/avformat.h" nogil:
         int flags
         int64_t max_analyze_duration
 
+        AVCodecID audio_codec_id
+
 
     cdef AVFormatContext* avformat_alloc_context()
 
