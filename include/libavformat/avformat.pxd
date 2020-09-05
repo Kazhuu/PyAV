@@ -187,6 +187,7 @@ cdef extern from "libavformat/avformat.h" nogil:
         int flags
         int64_t max_analyze_duration
 
+        # Forced audio codec set by user.
         AVCodecID audio_codec_id
 
 
